@@ -125,7 +125,7 @@ theme: butterfly
 deploy:
   - type: git
     repository: git@github.com:nanian-233/nanian-233.github.io.git
-    branch: main
+    branch: master
   # - type: baidu_url_submitter
   # - type: git
   #   #repo改为repo: git@域名:/var/repo/hexo.git
