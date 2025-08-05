@@ -1,0 +1,16 @@
+# 设置所有文件使用LF行结束符
+* text=auto eol=lf
+
+# 对于HTML文件强制使用LF
+*.html text eol=lf
+*.css text eol=lf
+*.js text eol=lf
+*.xml text eol=lf
+
+# 二进制文件不进行行结束符转换
+*.png binary
+*.jpg binary
+*.jpeg binary
+*.gif binary
+*.ico binary
+*.svg binary
