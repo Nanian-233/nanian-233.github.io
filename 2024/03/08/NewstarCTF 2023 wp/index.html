@@ -655,7 +655,7 @@ eval(str_rot13(convert_uudecode(str_rot13(base64_decode('xxx')))));
   document.addEventListener('pjax:error', e => {
     if (e.request.status === 404) {
       const usePjax = true
-      false
+      true
         ? (usePjax ? pjax.loadUrl('/404.html') : window.location.href = '/404.html')
         : window.location.href = e.request.responseURL
     }

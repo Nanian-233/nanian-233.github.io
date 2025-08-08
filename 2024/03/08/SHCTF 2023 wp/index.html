@@ -536,7 +536,7 @@ btf.addGlobalFn('pjaxSend', () => {
   document.addEventListener('pjax:error', e => {
     if (e.request.status === 404) {
       const usePjax = true
-      false
+      true
         ? (usePjax ? pjax.loadUrl('/404.html') : window.location.href = '/404.html')
         : window.location.href = e.request.responseURL
     }
