@@ -204,9 +204,19 @@ div#archive {
   border-radius: 20px;
 }
 
-/* 仅 404 页面：移除外层卡片边框 */
+/* 仅 404 页面：移除外层卡片白底与边框 */
 .page.type-404 #page {
+  background: transparent !important;
+  backdrop-filter: none !important;
   border: none !important;
+  border-radius: 0 !important;
+  box-shadow: none !important;
+  padding: 0 !important;
+}
+
+/* 仅 404 页面：取消 no-card 布局的额外内边距 */
+.page.type-404 .nc {
+  padding: 0 !important;
 }
 
 /* 导航栏 */
