@@ -204,6 +204,11 @@ div#archive {
   border-radius: 20px;
 }
 
+/* 仅 404 页面：移除外层卡片边框 */
+.page.type-404 #page {
+  border: none !important;
+}
+
 /* 导航栏 */
 #page-header.nav-fixed #nav {
   background: rgba(255, 255, 255, 0.75);
