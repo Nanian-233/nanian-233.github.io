@@ -219,6 +219,34 @@ div#archive {
   padding: 0 !important;
 }
 
+/* 调整文章内容字体大小 */
+#article-container {
+  font-size: 17px;
+  line-height: 1.8;
+}
+
+/* 调整标题字体大小 */
+#article-container h1 {
+  font-size: 1.8em;
+}
+
+#article-container h2 {
+  font-size: 1.6em;
+}
+
+#article-container h3 {
+  font-size: 1.4em;
+}
+
+#article-container h4 {
+  font-size: 1.2em;
+}
+
+#article-container h5,
+#article-container h6 {
+  font-size: 1.1em;
+}
+
 /* 导航栏 */
 #page-header.nav-fixed #nav {
   background: rgba(255, 255, 255, 0.75);
